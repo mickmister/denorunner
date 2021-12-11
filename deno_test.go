@@ -2,9 +2,10 @@ package denorunner_test
 
 import (
 	"context"
-	"denorunner"
 	"fmt"
 	"testing"
+
+	"github.com/mickmister/denorunner"
 )
 
 func TestDenoBasic(t *testing.T) {
@@ -91,7 +92,7 @@ function handle(event) {
 	defer fn.Close()
 
 	type data struct {
-		Name    string `json:"name"`
+		Name string `json:"name"`
 	}
 
 	for i := 0; i < 5; i++ {
